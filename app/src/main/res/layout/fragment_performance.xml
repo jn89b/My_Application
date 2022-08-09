@@ -4,27 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/background_set"
-    tools:context=".PTIModule">
+    tools:context=".Performance">
 
-    <Spinner
-        android:id="@+id/loop_gain_spinner"
-        android:layout_width="155dp"
-        android:layout_height="49dp"
-        android:backgroundTint="@color/buttonBackground"
-        android:spinnerMode="dropdown"
+    <Button
+        android:id="@+id/send_command_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="@string/send_command_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.874" />
 
     <Spinner
-        android:id="@+id/switch_module_spinner"
+        android:id="@+id/perf_switch_module_spinner"
         android:layout_width="155dp"
         android:layout_height="49dp"
-        android:layout_marginStart="224dp"
+        android:layout_marginStart="240dp"
         android:backgroundTint="@color/buttonBackground"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +32,7 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <Spinner
-        android:id="@+id/flight_card_spinner"
+        android:id="@+id/perf_flight_card_spinner"
         android:layout_width="155dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
@@ -45,19 +44,19 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <Spinner
-        android:id="@+id/injection_level"
+        android:id="@+id/altitude_spinner"
         android:layout_width="155dp"
         android:layout_height="49dp"
+        android:layout_marginStart="240dp"
         android:backgroundTint="@color/buttonBackground"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
+        app:layout_constraintVertical_bias="0.774" />
 
     <Spinner
-        android:id="@+id/injection_spinner"
+        android:id="@+id/airspeed_spinner"
         android:layout_width="155dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
@@ -66,32 +65,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
-
-    <Button
-        android:id="@+id/go_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:text="@string/go_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.899"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894" />
-
-    <Button
-        android:id="@+id/end_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:text="@string/end_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894" />
+        app:layout_constraintVertical_bias="0.774" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

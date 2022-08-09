@@ -11,9 +11,12 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.myapplication.databinding.MainEntryBinding;
+import com.example.myapplication.model.MainEntryViewModel;
 
 public class MainEntry extends Fragment {
 
@@ -31,6 +34,8 @@ public class MainEntry extends Fragment {
 
     EditText velocity_entry;
     private String velocity_val;
+
+    private MainEntryViewModel main_entry_view;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,23 +59,37 @@ public class MainEntry extends Fragment {
             Bundle savedInstanceState
     ) {
         View view = inflater.inflate(R.layout.main_entry, container, false);
-        ip_address_entry = view.findViewById(R.id.ip_address_entry);
 
+        ip_address_entry = view.findViewById(R.id.ip_address_entry);
+        velocity_entry = view.findViewById(R.id.velocity_entry);
+        time_entry = view.findViewById(R.id.pti_duration_entry);
+        //ip_address_entry.setText(ip_val);
         return view;
     }
 
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        main_entry_view = new ViewModelProvider(requireActivity()).get(MainEntryViewModel.class);
         //switch between first and second views
         view.findViewById(R.id.confirm).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MainEntryViewModel main_entry_view = new ViewModelProvider(requireActivity()).get(MainEntryViewModel.class);
+                MutableLiveData<String> ip = main_entry_view.getIP();
+                MutableLiveData<String> vel = main_entry_view.getVel();
+                MutableLiveData<String> time = main_entry_view.getTime();
+
+                ip_val = ip_address_entry.getText().toString();
+                time_val = time_entry.getText().toString();
+                velocity_val = velocity_entry.getText().toString();
+
+                main_entry_view.setIP(ip_val);
+                main_entry_view.setTime(time_val);
+                main_entry_view.setVelocity(velocity_val);
                 NavHostFragment.findNavController(MainEntry.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
-
     }
 
     @Override

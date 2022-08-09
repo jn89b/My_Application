@@ -22,5 +22,18 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/MainEntry" />
+        <action
+            android:id="@+id/action_PTIModule_to_Performance"
+            app:destination="@id/Performance" />
     </fragment>
+    <fragment
+        android:id="@+id/Performance"
+        android:name="com.example.myapplication.Performance"
+        android:label="@string/performance_module_label"
+        tools:layout="@layout/fragment_performance">
+        <action
+            android:id="@+id/action_Performance_to_PTIModule"
+            app:destination="@id/PTIModule" />
+    </fragment>
+
 </navigation>

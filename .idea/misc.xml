@@ -7,7 +7,11 @@
         <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/content_main.xml" value="0.17617753623188406" />
         <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_i_p.xml" value="0.33" />
+        <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_initial_entry.xml" value="0.1" />
+        <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_performance.xml" value="0.25" />
         <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_second.xml" value="0.33" />
+        <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/main_entry.xml" value="0.1" />
+        <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/layout/pti_module.xml" value="0.33" />
         <entry key="..\:/Users/jnguy/AndroidStudioProjects/MyApplication/app/src/main/res/menu/menu_main.xml" value="0.31979166666666664" />
       </map>
     </option>
@@ -17,5 +21,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressKotlinCodeStyleNotification">
+    <option name="disableForAll" value="true" />
   </component>
 </project>
